@@ -53,7 +53,6 @@ namespace RestaurantAPI2.Controllers
         {
             //HttpContext.Response.StatusCode = 401;
             //return $"Hello {name}";
-
             //return StatusCode(401, $"Hello {name}");
 
             return NotFound($"Hello {name}");
