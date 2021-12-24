@@ -11,29 +11,52 @@ namespace RestaurantAPI2.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
 
+        private readonly IWeatherForecastService _service;
         private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IWeatherForecastService service)
         {
             _logger = logger;
+            _service = service;
         }
 
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            var result = _service.Get();
+            return result;
+        }
+
+        [HttpGet("currentDay/{max}")]
+        public IEnumerable<WeatherForecast> Get([FromQuery] int take, [FromRoute] int max)
+        {
+            var result = _service.Get();
+            return result;
+        }
+
+
+        [HttpPost("generate/{numberOfResults}")]
+        public ActionResult<IEnumerable<WeatherForecast>> Generate([FromBody] TemperatureRange tempRange, [FromRoute] int numberOfResults)
+        {
+            if(numberOfResults < 0 || tempRange.minTemp > tempRange.maxTemp)
             {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+                return BadRequest();
+            }
+
+            var result = _service.Get(tempRange.minTemp, tempRange.maxTemp, numberOfResults);
+            return Ok(result);
+        }
+
+        [HttpPost]
+        public ActionResult<string> Hello([FromBody]string name)
+        {
+            //HttpContext.Response.StatusCode = 401;
+            //return $"Hello {name}";
+
+            //return StatusCode(401, $"Hello {name}");
+
+            return NotFound($"Hello {name}");
         }
     }
 }

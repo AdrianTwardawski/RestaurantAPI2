@@ -25,7 +25,7 @@ namespace RestaurantAPI2
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddTransient<IWeatherForecastService, WeatherForecastService>(); 
             services.AddControllers();
         }
 
@@ -40,9 +40,7 @@ namespace RestaurantAPI2
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
-            app.UseAuthorization();
-
+          
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
