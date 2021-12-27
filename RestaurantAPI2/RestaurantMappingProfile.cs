@@ -20,6 +20,11 @@ namespace RestaurantAPI2
             // automatycznie zmappuje te właściwości i nie musimy ich określać
 
             CreateMap<Dish, DishDto>();
+
+            CreateMap<CreateRestaurantDto, Restaurant>()
+                .ForMember(r => r.Address,
+                    c => c.MapFrom(dto => new Address()
+                        { City = dto.City, PostalCode = dto.PostalCode, Street = dto.Street }));
         }
     }
 }
