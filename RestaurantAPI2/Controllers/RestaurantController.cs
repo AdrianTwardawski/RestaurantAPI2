@@ -51,5 +51,17 @@ namespace RestaurantAPI2.Controllers
 
             return Created($"/api/restaurant/{id}", null);
         }
+
+        [HttpDelete("{id}")]
+        public ActionResult Delete([FromRoute] int id)
+        {
+            var isDeleted = _restaurantService.Delete(id);
+            if (isDeleted)
+            {
+                return NoContent();
+            }
+
+            return NotFound();
+        }
     }
 }
