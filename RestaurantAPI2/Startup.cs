@@ -29,6 +29,7 @@ namespace RestaurantAPI2
             services.AddControllers();
             services.AddDbContext<RestaurantDbContext>(); //rejestracja kontekstu bazy danych
             services.AddScoped<RestaurantSeeder>(); //rejestracja serwisu seeduj¹cego
+            services.AddAutoMapper(this.GetType().Assembly); //rejestracja AutoMappera
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
