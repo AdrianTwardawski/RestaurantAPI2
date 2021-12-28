@@ -110,3 +110,8 @@ Login failed for user 'LAPTOP-OTL6VM7D\Adrian'.
    at RestaurantAPI2.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\ErrorHandlingMiddleware.cs:line 21
 ClientConnectionId:6ac05c8f-1d29-4a2e-9555-83abab3ad087
 Error Number:4060,State:1,Class:11
+2021-12-28 15:20:42.4080||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2021-12-28 15:20:42.5008||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2021-12-28 15:20:42.5143||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-28 15:20:42.5143||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-28 15:20:42.5143||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 

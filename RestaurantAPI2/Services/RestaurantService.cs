@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using RestaurantAPI2.Entities;
+using RestaurantAPI2.Exceptions;
 using RestaurantAPI2.Models;
 using System;
 using System.Collections.Generic;
@@ -33,7 +34,8 @@ namespace RestaurantAPI2.Services
               .Include(r => r.Dishes)
               .FirstOrDefault(r => r.Id == id);
 
-            if (restaurant is null) return null;
+            if (restaurant is null)
+                throw new NotFoundException("RestaurantNotFound");
 
             var result = _mapper.Map<RestaurantDto>(restaurant);
             return result;
@@ -61,7 +63,7 @@ namespace RestaurantAPI2.Services
             return restaurant.Id;
         }
 
-        public bool Delete(int id)
+        public void Delete(int id)
         {
             _logger.LogError($"Restaurant with id: {id} DELETE action invoked");
 
@@ -69,30 +71,27 @@ namespace RestaurantAPI2.Services
               .Restaurants             
               .FirstOrDefault(r => r.Id == id);
 
-            if (restaurant is null) return false;
+            if (restaurant is null)
+                throw new NotFoundException("RestaurantNotFound");
 
             _dbContext.Restaurants.Remove(restaurant);
-            _dbContext.SaveChanges();  
-            
-            return true;
+            _dbContext.SaveChanges();                      
         }
 
-        public bool Update(int id, UpdateRestaurantDto dto)
+        public void Update(int id, UpdateRestaurantDto dto)
         {
             var restaurant = _dbContext
               .Restaurants          
               .FirstOrDefault(r => r.Id == id);
 
-            if (restaurant is null) return false;
+            if (restaurant is null)
+                throw new NotFoundException("RestaurantNotFound");
 
             restaurant.Name = dto.Name;
             restaurant.Description = dto.Description;
             restaurant.HasDelivery = dto.HasDelivery;
             
             _dbContext.SaveChanges();
-
-            return true;
-
         }
     }
 }

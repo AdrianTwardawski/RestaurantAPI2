@@ -12,6 +12,8 @@ using System.Threading.Tasks;
 namespace RestaurantAPI2.Controllers
 {
     [Route("api/restaurant")]
+    [ApiController] /*używając ApiController pozbywamy się kodu, który był odpowiedzialny za 
+    walidacje modelu i zwracanie odpowiedniego kodu statusu wraz z błędami walidacji do klinta*/
     public class RestaurantController : ControllerBase
     {
         private readonly IRestaurantService _restaurantService;
@@ -31,22 +33,18 @@ namespace RestaurantAPI2.Controllers
         [HttpGet("{id}")]
         public ActionResult<RestaurantDto> Get([FromRoute] int id)
         {
-            var restaurant = _restaurantService.GetById(id);
-            if (restaurant is null)
-            { 
-                return NotFound();
-            }
-         
+            var restaurant = _restaurantService.GetById(id);                   
             return Ok(restaurant);
         }
 
         [HttpPost]
         public ActionResult CreateRestaurant([FromBody] CreateRestaurantDto dto)
         {
-            if(!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            /*POZBYTO SIĘ ZA POMOCĄ [ApiController]*/
+            //if(!ModelState.IsValid)
+            //{
+            //    return BadRequest(ModelState);
+            //}
             var id = _restaurantService.Create(dto);
 
             return Created($"/api/restaurant/{id}", null);
@@ -55,28 +53,14 @@ namespace RestaurantAPI2.Controllers
         [HttpDelete("{id}")]
         public ActionResult Delete([FromRoute] int id)
         {
-            var isDeleted = _restaurantService.Delete(id);
-            if (isDeleted)
-            {
-                return NoContent();
-            }
-
+            _restaurantService.Delete(id);          
             return NotFound();
         }
 
         [HttpPut("{id}")]
         public ActionResult Update([FromBody] UpdateRestaurantDto dto, [FromRoute] int id)
-        {
-            if(!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            var isUpdated = _restaurantService.Update(id, dto);
-            if(!isUpdated)
-            {
-                return NotFound();
-            }
+        {         
+            _restaurantService.Update(id, dto);          
             return Ok();
         }
     }
