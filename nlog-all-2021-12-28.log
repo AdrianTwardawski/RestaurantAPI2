@@ -27,3 +27,86 @@
 2021-12-28 13:44:08.0508||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
 2021-12-28 13:44:08.0661||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
 2021-12-28 13:44:14.5015||ERROR|RestaurantAPI2.Services.RestaurantService|Restaurant with id: 888 DELETE action invoked 
+2021-12-28 14:17:22.1436||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2021-12-28 14:17:22.3011||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2021-12-28 14:17:22.3188||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-28 14:17:22.3336||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-28 14:17:22.3336||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2021-12-28 14:19:39.2964||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2021-12-28 14:19:39.3779||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2021-12-28 14:19:39.3917||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-28 14:19:39.3917||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-28 14:19:39.3917||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2021-12-28 14:20:53.8793||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2021-12-28 14:20:53.9584||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2021-12-28 14:20:53.9584||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-28 14:20:53.9712||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-28 14:20:53.9712||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2021-12-28 14:21:58.1929||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2021-12-28 14:21:58.2680||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2021-12-28 14:21:58.2680||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-28 14:21:58.3011||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-28 14:21:58.3822||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2021-12-28 14:23:34.6225||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2021-12-28 14:23:34.7437||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2021-12-28 14:23:34.7637||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-28 14:23:34.7794||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-28 14:23:34.7794||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2021-12-28 14:47:52.6665||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2021-12-28 14:47:52.7617||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2021-12-28 14:47:52.7907||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-28 14:47:52.8014||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-28 14:47:52.8014||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2021-12-28 14:49:19.8144||ERROR|RestaurantAPI2.Middleware.ErrorHandlingMiddleware|Cannot open database "estaurantDb2" requested by the login. The login failed.
+Login failed for user 'LAPTOP-OTL6VM7D\Adrian'. Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "estaurantDb2" requested by the login. The login failed.
+Login failed for user 'LAPTOP-OTL6VM7D\Adrian'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at RestaurantAPI2.Services.RestaurantService.GetById(Int32 id) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\Services\RestaurantService.cs:line 30
+   at RestaurantAPI2.Controllers.RestaurantController.Get(Int32 id) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\Controllers\RestaurantController.cs:line 34
+   at lambda_method7(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at RestaurantAPI2.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\ErrorHandlingMiddleware.cs:line 21
+ClientConnectionId:6ac05c8f-1d29-4a2e-9555-83abab3ad087
+Error Number:4060,State:1,Class:11
