@@ -19,7 +19,7 @@ namespace RestaurantAPI2.Middleware
         {
             try
             {
-                await next.Invoke(context);
+                await next.Invoke(context); //wywołanie reszty przepływu zapytania
             }
             catch(NotFoundException notFoundException)
             {

@@ -120,3 +120,14 @@ Error Number:4060,State:1,Class:11
 2021-12-28 16:06:36.9347||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
 2021-12-28 16:06:36.9554||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
 2021-12-28 16:06:36.9705||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2021-12-28 17:07:51.4075||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2021-12-28 17:07:51.4643||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2021-12-28 17:07:51.5592||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-28 17:07:51.6493||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-28 17:07:51.6832||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2021-12-28 17:09:00.1382||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2021-12-28 17:09:00.1916||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2021-12-28 17:09:00.2024||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-28 17:09:00.2024||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-28 17:09:00.2187||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2021-12-28 17:09:30.3861||INFO|RestaurantAPI2.MIddleware.RequestTimeMiddleware|Request[GET] at /api/restaurant took 23169 ms 
