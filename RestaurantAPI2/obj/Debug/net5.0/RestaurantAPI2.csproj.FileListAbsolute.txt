@@ -60,3 +60,8 @@ C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\bin\Debug\net5.0\nl
 C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\bin\Debug\net5.0\NLog.dll
 C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\bin\Debug\net5.0\NLog.Extensions.Logging.dll
 C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\bin\Debug\net5.0\NLog.Web.AspNetCore.dll
+C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\obj\Debug\net5.0\RestaurantAPI2.MvcApplicationPartsAssemblyInfo.cs

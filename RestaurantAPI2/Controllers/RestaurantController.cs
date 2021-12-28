@@ -13,7 +13,7 @@ namespace RestaurantAPI2.Controllers
 {
     [Route("api/restaurant")]
     [ApiController] /*używając ApiController pozbywamy się kodu, który był odpowiedzialny za 
-    walidacje modelu i zwracanie odpowiedniego kodu statusu wraz z błędami walidacji do klinta*/
+    walidacje modelu i zwracanie odpowiedniego kodu statusu wraz z błędami walidacji do klienta*/
     public class RestaurantController : ControllerBase
     {
         private readonly IRestaurantService _restaurantService;
