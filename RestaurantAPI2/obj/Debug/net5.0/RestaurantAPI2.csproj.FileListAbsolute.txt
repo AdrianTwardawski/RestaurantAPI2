@@ -56,3 +56,7 @@ C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\bin\Debug\net5.0\ru
 C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\obj\Debug\net5.0\RestaurantAPI2.csproj.CopyComplete
 C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\bin\Debug\net5.0\nlog.config
+C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\bin\Debug\net5.0\NLog.dll
+C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\bin\Debug\net5.0\NLog.Extensions.Logging.dll
+C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\bin\Debug\net5.0\NLog.Web.AspNetCore.dll

@@ -1,0 +1,29 @@
+2021-12-28 13:29:05.3182||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2021-12-28 13:29:05.4834||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2021-12-28 13:29:05.5108||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-28 13:29:05.5154||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-28 13:29:05.5154||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2021-12-28 13:31:58.9242||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2021-12-28 13:31:58.9759||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2021-12-28 13:31:58.9848||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-28 13:31:58.9848||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-28 13:31:58.9992||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2021-12-28 13:35:00.8561||WARN|RestaurantAPI2.Services.RestaurantService|Restaurant with id: 888 DELETE action invoked 
+2021-12-28 13:40:03.5734||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2021-12-28 13:40:03.6295||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2021-12-28 13:40:03.6390||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-28 13:40:03.6390||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-28 13:40:03.6390||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2021-12-28 13:40:20.4547||ERROR|RestaurantAPI2.Services.RestaurantService|Restaurant with id: 888 DELETE action invoked 
+2021-12-28 13:42:38.2955||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2021-12-28 13:42:38.3467||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2021-12-28 13:42:38.3467||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-28 13:42:38.3658||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-28 13:42:38.3658||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2021-12-28 13:42:55.0044||ERROR|RestaurantAPI2.Services.RestaurantService|Restaurant with id: 888 DELETE action invoked 
+2021-12-28 13:44:07.8823||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2021-12-28 13:44:07.9836||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2021-12-28 13:44:08.0051||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-28 13:44:08.0508||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-28 13:44:08.0661||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2021-12-28 13:44:14.5015||ERROR|RestaurantAPI2.Services.RestaurantService|Restaurant with id: 888 DELETE action invoked 
