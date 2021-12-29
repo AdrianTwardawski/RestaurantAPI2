@@ -35,6 +35,7 @@ namespace RestaurantAPI2
             services.AddAutoMapper(this.GetType().Assembly); //rejestracja AutoMappera
             services.AddScoped<IRestaurantService, RestaurantService>(); //rejestacja serwisu do obs³ugi metod kontrolera
             services.AddScoped<IDishService, DishService>();
+            services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<ErrorHandlingMiddleware>(); //rejestracja serwisu do obs³ugi wyj¹tków
             services.AddScoped<RequestTimeMiddleware>();
             services.AddSwaggerGen();

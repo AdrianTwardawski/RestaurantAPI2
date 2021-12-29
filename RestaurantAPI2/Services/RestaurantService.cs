@@ -11,6 +11,16 @@ using System.Threading.Tasks;
 
 namespace RestaurantAPI2.Services
 {
+    public interface IRestaurantService
+    {
+        int Create(CreateRestaurantDto dto);
+        void Delete(int id);
+        IEnumerable<RestaurantDto> GetAll();
+        RestaurantDto GetById(int id);
+        void Update(int id, UpdateRestaurantDto dto);
+    }
+
+
     //RestaurantService został utworzony, ponieważ jedynym zadaniem w akcjach w kontrolerze powinno być odebranie zapytania, ewentualnie jego walidacja 
     //oraz przesłanie takiego zapytania do jakiegoś serwisu i to własnie ten serwis powinien go obsłużyć
     public class RestaurantService : IRestaurantService
