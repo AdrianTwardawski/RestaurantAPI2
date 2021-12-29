@@ -1,3 +1,5 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,6 +12,8 @@ using Microsoft.Extensions.Logging;
 using RestaurantAPI2.Entities;
 using RestaurantAPI2.Middleware;
 using RestaurantAPI2.MIddleware;
+using RestaurantAPI2.Models;
+using RestaurantAPI2.Models.Validator;
 using RestaurantAPI2.Services;
 using System;
 using System.Collections.Generic;
@@ -29,8 +33,8 @@ namespace RestaurantAPI2
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {          
-            services.AddControllers();
+        {
+            services.AddControllers().AddFluentValidation();
             services.AddDbContext<RestaurantDbContext>(); //rejestracja kontekstu bazy danych
             services.AddScoped<RestaurantSeeder>(); //rejestracja serwisu seeduj¹cego
             services.AddAutoMapper(this.GetType().Assembly); //rejestracja AutoMappera
@@ -39,6 +43,7 @@ namespace RestaurantAPI2
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<ErrorHandlingMiddleware>(); //rejestracja serwisu do obs³ugi wyj¹tków
             services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
+            services.AddScoped<IValidator<RegisterUserDto>, RegisterUserDtoValidator>();
             services.AddScoped<RequestTimeMiddleware>();
             services.AddSwaggerGen();
         }
