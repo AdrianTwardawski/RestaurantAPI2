@@ -8,5 +8,7 @@ namespace RestaurantAPI2.Services
         int Create(int id, CreateDishDto dto);
         List<DishDto> GetAll(int restaurantId);
         DishDto GetById(int restaurantId, int dishId);
+        void RemoveAll(int restaurantId);
+        void Remove(int restaurantId, int dishId);
     }
 }

@@ -54,7 +54,7 @@ namespace RestaurantAPI2.Controllers
         public ActionResult Delete([FromRoute] int id)
         {
             _restaurantService.Delete(id);          
-            return NotFound();
+            return NoContent();
         }
 
         [HttpPut("{id}")]
