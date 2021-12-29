@@ -24,6 +24,13 @@ namespace RestaurantAPI2
                     _dbContext.Restaurants.AddRange(restaurants); //przekazanie listy typu restaurant do Db
                     _dbContext.SaveChanges(); //zapisanie zmian na kontekście Db
                 }
+
+                if(!_dbContext.Roles.Any())
+                {
+                    var roles = GetRoles();
+                    _dbContext.Roles.AddRange(roles);
+                    _dbContext.SaveChanges();
+                }
             }
         }
 
@@ -89,6 +96,28 @@ namespace RestaurantAPI2
                 }
             };
             return restaurants;
+        }
+
+        public IEnumerable<Role> GetRoles()
+        {
+            var roles = new List<Role>()
+            {
+                new Role()
+                {
+                    Name = "User"
+                },
+
+                new Role()
+                {
+                    Name = "Manager"
+                },
+
+                new Role()
+                {
+                    Name = "Admin"
+                }
+            };
+            return roles;
         }
     }
 }
