@@ -33,3 +33,8 @@
 2021-12-29 16:50:17.1472||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
 2021-12-29 16:50:17.1472||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
 2021-12-29 16:50:17.1578||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2021-12-29 17:14:06.6233||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2021-12-29 17:14:06.6996||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2021-12-29 17:14:06.7062||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-12-29 17:14:06.7062||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-12-29 17:14:06.7062||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
