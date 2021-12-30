@@ -21,6 +21,11 @@ namespace RestaurantAPI2.Middleware
             {
                 await next.Invoke(context); //wywołanie reszty przepływu zapytania
             }
+            catch(BadRequestException badRequestException)
+            {
+                context.Response.StatusCode = 400;
+                await context.Response.WriteAsync(badRequestException.Message);
+            }
             catch(NotFoundException notFoundException)
             {
                 context.Response.StatusCode = 404;

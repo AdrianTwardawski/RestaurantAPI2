@@ -39,11 +39,13 @@ namespace RestaurantAPI2
             var authenticationSettings = new AuthenticationSettings();
 
             /*odnosz¹c siê do sekcji Authentication  z appsetting.json Bindujemy (³¹czymy wartoœci) do authenticationSettings,
-             czyli po tej linii kodu wartoœci, które mamy w pliku appsetting.json bêd¹ dostêpne na obiekcie authenticationSettings*/
+            czyli po tej linii kodu wartoœci, które mamy w pliku appsetting.json bêd¹ dostêpne na obiekcie authenticationSettings*/
+            Configuration.GetSection("Authentication").Bind(authenticationSettings);
 
+            services.AddSingleton(authenticationSettings);
             services.AddAuthentication(option =>     //konfiguracja Autentykacji
             {
-                option.DefaultAuthenticateScheme = "Bearer";
+                option.DefaultAuthenticateScheme = "Bearer"; //Domyœlny schemat autentykacji
                 option.DefaultScheme = "Bearer";
                 option.DefaultChallengeScheme = "Bearer";
             }).AddJwtBearer(cfg =>
@@ -58,8 +60,8 @@ namespace RestaurantAPI2
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(authenticationSettings.JwtKey)),
                     //klucz prywatny wygenerowany na podstawie tej wartoœci JwtKey, która zosta³a zapisana w appsetting.json
                 };
-            });  
-            Configuration.GetSection("Authentication").Bind(authenticationSettings); 
+            });
+            
             services.AddControllers().AddFluentValidation();
             services.AddDbContext<RestaurantDbContext>(); //rejestracja kontekstu bazy danych
             services.AddScoped<RestaurantSeeder>(); //rejestracja serwisu seeduj¹cego
