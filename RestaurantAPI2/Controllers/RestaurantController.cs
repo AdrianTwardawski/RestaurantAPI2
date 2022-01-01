@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RestaurantAPI2.Entities;
@@ -14,6 +15,7 @@ namespace RestaurantAPI2.Controllers
     [Route("api/restaurant")]
     [ApiController] /*używając ApiController pozbywamy się kodu, który był odpowiedzialny za 
     walidacje modelu i zwracanie odpowiedniego kodu statusu wraz z błędami walidacji do klienta*/
+    [Authorize] //każda z akcji w kontrolerze będzie wymagała Autoryzacji
     public class RestaurantController : ControllerBase
     {
         private readonly IRestaurantService _restaurantService;
@@ -58,6 +60,7 @@ namespace RestaurantAPI2.Controllers
         }
 
         [HttpPut("{id}")]
+        [AllowAnonymous] //sprawi, że automatycznie ta akcja będzie zezwalać na zapytania bez nagłówka autoryzacji
         public ActionResult Update([FromBody] UpdateRestaurantDto dto, [FromRoute] int id)
         {         
             _restaurantService.Update(id, dto);          
