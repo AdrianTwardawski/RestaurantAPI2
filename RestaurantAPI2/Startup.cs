@@ -61,7 +61,10 @@ namespace RestaurantAPI2
                     //klucz prywatny wygenerowany na podstawie tej wartoœci JwtKey, która zosta³a zapisana w appsetting.json
                 };
             });
-            
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("HasNationality", builder => builder.RequireClaim("Nationality", "German", "Polish"));
+            }); //auoryzacja wartoœci¹ Claim'u
             services.AddControllers().AddFluentValidation();
             services.AddDbContext<RestaurantDbContext>(); //rejestracja kontekstu bazy danych
             services.AddScoped<RestaurantSeeder>(); //rejestracja serwisu seeduj¹cego

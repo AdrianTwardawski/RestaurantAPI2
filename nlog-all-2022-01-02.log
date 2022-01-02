@@ -83,3 +83,8 @@
    at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
 --- End of stack trace from previous location ---
    at RestaurantAPI2.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\ErrorHandlingMiddleware.cs:line 22
+2022-01-02 13:04:20.5843||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-01-02 13:04:20.6585||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-01-02 13:04:20.6761||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-02 13:04:20.6761||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-02 13:04:20.6761||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 

@@ -26,6 +26,7 @@ namespace RestaurantAPI2.Controllers
         }
 
         [HttpGet]
+        [Authorize(Policy = "HasNationality")] //auoryzacja wartością Claim'u
         public ActionResult<IEnumerable<RestaurantDto>> GetAll()
         {
             var restaurantsDtos = _restaurantService.GetAll();
