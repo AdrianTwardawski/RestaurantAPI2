@@ -125,3 +125,8 @@
 2022-01-02 18:40:26.9916||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
 2022-01-02 18:40:26.9916||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
 2022-01-02 18:51:10.5369||ERROR|RestaurantAPI2.Services.RestaurantService|Restaurant with id: 1004 DELETE action invoked 
+2022-01-02 20:50:05.3954||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-01-02 20:50:05.5487||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-01-02 20:50:05.5760||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-02 20:50:05.6109||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-02 20:50:05.6640||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
