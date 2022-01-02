@@ -106,3 +106,22 @@
 2022-01-02 13:36:30.0733||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|Authorization succedded 
 2022-01-02 13:37:57.8438||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|User:   with date of birth: [2020-12-11 00:00:00] 
 2022-01-02 13:37:57.8477||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|Authorization failed 
+2022-01-02 15:05:11.2910||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-01-02 15:05:11.4084||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-01-02 15:05:11.4150||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-02 15:05:11.4293||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-02 15:05:11.4293||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-01-02 15:05:37.9102||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|User:   with date of birth: [2020-12-11 00:00:00] 
+2022-01-02 15:05:37.9330||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|Authorization failed 
+2022-01-02 15:07:27.0096||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|User:   with date of birth: [1980-12-11 00:00:00] 
+2022-01-02 15:07:27.0313||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|Authorization succedded 
+2022-01-02 15:07:41.8449||INFO|RestaurantAPI2.MIddleware.RequestTimeMiddleware|Request[GET] at /api/restaurant took 14827 ms 
+2022-01-02 15:09:14.4634||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|User:   with date of birth: [1980-12-11 00:00:00] 
+2022-01-02 15:09:24.9837||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|Authorization succedded 
+2022-01-02 15:10:22.1615||INFO|RestaurantAPI2.MIddleware.RequestTimeMiddleware|Request[GET] at /api/restaurant took 88052 ms 
+2022-01-02 18:40:26.9118||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-01-02 18:40:26.9781||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-01-02 18:40:26.9916||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-02 18:40:26.9916||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-02 18:40:26.9916||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-01-02 18:51:10.5369||ERROR|RestaurantAPI2.Services.RestaurantService|Restaurant with id: 1004 DELETE action invoked 

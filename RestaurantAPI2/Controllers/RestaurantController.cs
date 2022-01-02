@@ -8,6 +8,7 @@ using RestaurantAPI2.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace RestaurantAPI2.Controllers
@@ -50,15 +51,16 @@ namespace RestaurantAPI2.Controllers
             //{
             //    return BadRequest(ModelState);
             //}
-            
-            var id = _restaurantService.Create(dto);
+
+            var userId = int.Parse(User.FindFirst(c => c.Type == ClaimTypes.NameIdentifier).Value);
+            var id = _restaurantService.Create(dto, userId);
             return Created($"/api/restaurant/{id}", null);
         }
 
         [HttpDelete("{id}")]
         public ActionResult Delete([FromRoute] int id)
         {
-            _restaurantService.Delete(id);          
+            _restaurantService.Delete(id, User);          
             return NoContent();
         }
 
@@ -66,7 +68,7 @@ namespace RestaurantAPI2.Controllers
         [AllowAnonymous] //sprawi, że automatycznie ta akcja będzie zezwalać na zapytania bez nagłówka autoryzacji
         public ActionResult Update([FromBody] UpdateRestaurantDto dto, [FromRoute] int id)
         {         
-            _restaurantService.Update(id, dto);          
+            _restaurantService.Update(id, dto, User);          
             return Ok();
         }
     }

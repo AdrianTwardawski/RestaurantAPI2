@@ -73,3 +73,4 @@
    at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
 --- End of stack trace from previous location ---
    at RestaurantAPI2.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\ErrorHandlingMiddleware.cs:line 22
+2022-01-02 18:51:10.5369||ERROR|RestaurantAPI2.Services.RestaurantService|Restaurant with id: 1004 DELETE action invoked 
