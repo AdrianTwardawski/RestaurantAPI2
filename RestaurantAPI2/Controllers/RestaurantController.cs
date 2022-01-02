@@ -40,6 +40,7 @@ namespace RestaurantAPI2.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin, Manager")] //atrybut Authorize nałożony na akcje ma większy priorytet niż Authorize na poziomie kontrolera
         public ActionResult CreateRestaurant([FromBody] CreateRestaurantDto dto)
         {
             /*POZBYTO SIĘ ZA POMOCĄ [ApiController]*/
@@ -47,8 +48,8 @@ namespace RestaurantAPI2.Controllers
             //{
             //    return BadRequest(ModelState);
             //}
+            
             var id = _restaurantService.Create(dto);
-
             return Created($"/api/restaurant/{id}", null);
         }
 
