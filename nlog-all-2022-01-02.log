@@ -88,3 +88,21 @@
 2022-01-02 13:04:20.6761||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
 2022-01-02 13:04:20.6761||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
 2022-01-02 13:04:20.6761||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-01-02 13:32:38.5292||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-01-02 13:32:38.6156||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-01-02 13:32:38.6278||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-02 13:32:38.6278||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-02 13:32:38.6278||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-01-02 13:33:45.0420||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|User:   with date of birth: [2010-12-11 00:00:00] 
+2022-01-02 13:33:45.0420||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|Authorization succedded 
+2022-01-02 13:34:45.3903||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|User:   with date of birth: [1980-12-11 00:00:00] 
+2022-01-02 13:34:45.3974||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|Authorization failed 
+2022-01-02 13:36:03.0063||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-01-02 13:36:03.0894||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-01-02 13:36:03.0991||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-02 13:36:03.0991||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-02 13:36:03.1117||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-01-02 13:36:30.0733||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|User:   with date of birth: [1980-12-11 00:00:00] 
+2022-01-02 13:36:30.0733||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|Authorization succedded 
+2022-01-02 13:37:57.8438||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|User:   with date of birth: [2020-12-11 00:00:00] 
+2022-01-02 13:37:57.8477||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|Authorization failed 
