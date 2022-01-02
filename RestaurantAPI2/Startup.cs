@@ -67,10 +67,12 @@ namespace RestaurantAPI2
             {
                 options.AddPolicy("HasNationality", builder => builder.RequireClaim("Nationality", "German", "Polish")); //auoryzacja wartoœci¹ Claim'u
                 options.AddPolicy("AtLeast20", builder => builder.AddRequirements(new MinimumAgeRequirement(20)));
-
+                options.AddPolicy("CreatedAtLeast2Restaurants", builder => builder.AddRequirements(new CreatedMultipleRestaurantsRequirement(2)));
+                
             });
             services.AddScoped<IAuthorizationHandler, MinimumAgeRequirementHandler>();
             services.AddScoped<IAuthorizationHandler, ResourceOperationRequirementHandler>();
+            services.AddScoped<IAuthorizationHandler, CreatedMultipleRestaurantsRequirementHandler>();
             services.AddControllers().AddFluentValidation();
             services.AddDbContext<RestaurantDbContext>(); //rejestracja kontekstu bazy danych
             services.AddScoped<RestaurantSeeder>(); //rejestracja serwisu seeduj¹cego
