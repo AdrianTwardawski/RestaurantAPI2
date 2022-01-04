@@ -17,6 +17,7 @@ using RestaurantAPI2.Middleware;
 using RestaurantAPI2.MIddleware;
 using RestaurantAPI2.Models;
 using RestaurantAPI2.Models.Validator;
+using RestaurantAPI2.Models.Validators;
 using RestaurantAPI2.Services;
 using System;
 using System.Collections.Generic;
@@ -83,6 +84,7 @@ namespace RestaurantAPI2
             services.AddScoped<ErrorHandlingMiddleware>(); //rejestracja serwisu do obs³ugi wyj¹tków
             services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
             services.AddScoped<IValidator<RegisterUserDto>, RegisterUserDtoValidator>();
+            services.AddScoped<IValidator<RestaurantQuery>, RestaurantQueryValidator>();
             services.AddScoped<RequestTimeMiddleware>();
             services.AddScoped<IUserContextService, UserContextService>();
             services.AddHttpContextAccessor(); //umo¿liwia wstrzykniêcie IHttpContextAccessor w UserContextService.cs
