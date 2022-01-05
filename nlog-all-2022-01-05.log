@@ -1,0 +1,69 @@
+2022-01-05 13:23:00.4457||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-01-05 13:23:00.5968||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-01-05 13:23:00.6072||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-05 13:23:00.6072||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-05 13:23:00.6072||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-01-05 13:23:11.5745||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|User:   with date of birth: [1980-12-11 00:00:00] 
+2022-01-05 13:23:11.5793||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|Authorization succedded 
+2022-01-05 13:24:07.3996||ERROR|RestaurantAPI2.Middleware.ErrorHandlingMiddleware|Object reference not set to an instance of an object. System.NullReferenceException: Object reference not set to an instance of an object.
+   at RestaurantAPI2.Authorization.MinimumAgeRequirementHandler.HandleRequirementAsync(AuthorizationHandlerContext context, MinimumAgeRequirement requirement) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\Authorization\MinimumAgeRequirementHandler.cs:line 20
+   at Microsoft.AspNetCore.Authorization.AuthorizationHandler`1.HandleAsync(AuthorizationHandlerContext context)
+   at Microsoft.AspNetCore.Authorization.DefaultAuthorizationService.AuthorizeAsync(ClaimsPrincipal user, Object resource, IEnumerable`1 requirements)
+   at Microsoft.AspNetCore.Authorization.Policy.PolicyEvaluator.AuthorizeAsync(AuthorizationPolicy policy, AuthenticateResult authenticationResult, HttpContext context, Object resource)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at RestaurantAPI2.MIddleware.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\RequestTimeMiddleware.cs:line 23
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at RestaurantAPI2.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\ErrorHandlingMiddleware.cs:line 22
+2022-01-05 13:24:35.0933||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|User:   with date of birth: [1980-12-11 00:00:00] 
+2022-01-05 13:24:35.0933||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|Authorization succedded 
+2022-01-05 16:13:49.4947||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-01-05 16:13:49.5717||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-01-05 16:13:49.5910||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-05 16:13:49.6068||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-05 16:13:49.6260||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-01-05 16:17:15.4089||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|User:   with date of birth: [1980-12-11 00:00:00] 
+2022-01-05 16:17:15.4089||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|Authorization succedded 
+2022-01-05 16:17:28.4832||ERROR|RestaurantAPI2.Middleware.ErrorHandlingMiddleware|Value cannot be null. (Parameter 'key') System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at System.Collections.Generic.Dictionary`2.FindValue(TKey key)
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at RestaurantAPI2.Services.RestaurantService.GetAll(RestaurantQuery query) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\Services\RestaurantService.cs:line 79
+   at RestaurantAPI2.Controllers.RestaurantController.GetAll(RestaurantQuery query) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\Controllers\RestaurantController.cs:line 36
+   at lambda_method22(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at RestaurantAPI2.MIddleware.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\RequestTimeMiddleware.cs:line 23
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at RestaurantAPI2.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\ErrorHandlingMiddleware.cs:line 22
+2022-01-05 16:19:23.2736||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-01-05 16:19:23.3237||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-01-05 16:19:23.3378||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-05 16:19:23.3464||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-05 16:19:23.3464||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-01-05 16:19:55.6405||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|User:   with date of birth: [1980-12-11 00:00:00] 
+2022-01-05 16:19:55.6405||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|Authorization succedded 
+2022-01-05 16:20:19.8249||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|User:   with date of birth: [1980-12-11 00:00:00] 
+2022-01-05 16:20:19.8488||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|Authorization succedded 
+2022-01-05 16:20:56.2829||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|User:   with date of birth: [1980-12-11 00:00:00] 
+2022-01-05 16:20:56.2829||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|Authorization succedded 
+2022-01-05 16:21:12.9272||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|User:   with date of birth: [1980-12-11 00:00:00] 
+2022-01-05 16:21:12.9921||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|Authorization succedded 
