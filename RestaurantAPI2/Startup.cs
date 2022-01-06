@@ -89,11 +89,22 @@ namespace RestaurantAPI2
             services.AddScoped<IUserContextService, UserContextService>();
             services.AddHttpContextAccessor(); //umo¿liwia wstrzykniêcie IHttpContextAccessor w UserContextService.cs
             services.AddSwaggerGen();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("FrontedClient", builder =>
+
+                    builder.AllowAnyMethod()
+                        .AllowAnyHeader()
+                        .WithOrigins(Configuration["AllowedOrigins"])
+
+                );                
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, RestaurantSeeder seeder)
         {
+            app.UseCors("FrontEndClient");
             seeder.Seed(); /*ka¿de zapytanie do API przejdzie przez proces seedowanie, przez co encje
             zostan¹ dodane ju¿ przy pierwszym zapytaniu w API*/
             if (env.IsDevelopment())
