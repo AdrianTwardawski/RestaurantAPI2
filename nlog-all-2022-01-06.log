@@ -18,3 +18,58 @@
 2022-01-06 18:26:06.3076||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
 2022-01-06 18:26:06.4134||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
 2022-01-06 18:26:06.4474||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-01-06 18:50:44.9886||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-01-06 18:50:45.0622||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-01-06 18:50:45.0814||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-06 18:50:45.0814||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-06 18:50:45.0974||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-01-06 18:56:52.3431||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-01-06 18:56:52.4068||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-01-06 18:56:52.4244||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-06 18:56:52.4419||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-06 18:56:52.4659||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-01-06 23:19:20.4186||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-01-06 23:19:20.4659||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-01-06 23:19:20.4764||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-06 23:19:20.4882||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-06 23:19:20.4996||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-01-06 23:23:10.3076||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-01-06 23:23:10.3725||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-01-06 23:23:10.3725||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-06 23:23:10.3904||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-06 23:23:10.3904||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-01-06 23:24:46.2567||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-01-06 23:24:46.3541||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-01-06 23:24:46.3771||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-06 23:24:46.3944||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-06 23:24:46.4092||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-01-06 23:25:07.0728||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-01-06 23:25:07.1357||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-01-06 23:25:07.1451||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-06 23:25:07.1451||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-06 23:25:07.1576||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-01-06 23:25:17.3122||ERROR|RestaurantAPI2.Middleware.ErrorHandlingMiddleware|Object reference not set to an instance of an object. System.NullReferenceException: Object reference not set to an instance of an object.
+   at RestaurantAPI2.Authorization.MinimumAgeRequirementHandler.HandleRequirementAsync(AuthorizationHandlerContext context, MinimumAgeRequirement requirement) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\Authorization\MinimumAgeRequirementHandler.cs:line 20
+   at Microsoft.AspNetCore.Authorization.AuthorizationHandler`1.HandleAsync(AuthorizationHandlerContext context)
+   at Microsoft.AspNetCore.Authorization.DefaultAuthorizationService.AuthorizeAsync(ClaimsPrincipal user, Object resource, IEnumerable`1 requirements)
+   at Microsoft.AspNetCore.Authorization.Policy.PolicyEvaluator.AuthorizeAsync(AuthorizationPolicy policy, AuthenticateResult authenticationResult, HttpContext context, Object resource)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at RestaurantAPI2.MIddleware.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\RequestTimeMiddleware.cs:line 23
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at RestaurantAPI2.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\ErrorHandlingMiddleware.cs:line 22
+2022-01-06 23:25:57.2528||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-01-06 23:25:57.3343||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-01-06 23:25:57.3561||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-06 23:25:57.3651||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-06 23:25:57.3651||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-01-06 23:26:24.4725||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-01-06 23:26:24.5274||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-01-06 23:26:24.5391||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-01-06 23:26:24.5486||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-01-06 23:26:24.5486||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-01-06 23:27:54.2754||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|User:   with date of birth: [1980-12-11 00:00:00] 
+2022-01-06 23:27:54.2954||INFO|RestaurantAPI2.Authorization.MinimumAgeRequirementHandler|Authorization succedded 
