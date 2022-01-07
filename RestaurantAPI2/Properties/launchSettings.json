@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api",
+      "launchUrl": "test",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,8 +20,8 @@
     "RestaurantAPI2": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
-      "launchBrowser": false,
-      "launchUrl": "api",
+      "launchBrowser": true,
+      "launchUrl": "test",
       "applicationUrl": "https://localhost:5001;http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
