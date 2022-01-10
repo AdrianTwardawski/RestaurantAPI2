@@ -19,6 +19,6 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore ./RestaurantAPI2/
       - name: Build
-        run: dotnet --no-restore
+        run: dotnet --no-restore ./RestaurantAPI2/
       - name: Test
         run: dotnet test
