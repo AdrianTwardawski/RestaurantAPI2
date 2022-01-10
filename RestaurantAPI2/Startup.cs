@@ -44,7 +44,7 @@ namespace RestaurantAPI2
 
             /*odnosz�c si� do sekcji Authentication  z appsetting.json Bindujemy (��czymy warto�ci) do authenticationSettings,
             czyli po tej linii kodu warto�ci, kt�re mamy w pliku appsetting.json b�d� dost�pne na obiekcie authenticationSettings*/
-            Configuration.GetSection("Authentication").Bind(authenticationSettings)
+            Configuration.GetSection("Authentication").Bind(authenticationSettings);
 
             services.AddSingleton(authenticationSettings);
             services.AddAuthentication(option =>     //konfiguracja Autentykacji
