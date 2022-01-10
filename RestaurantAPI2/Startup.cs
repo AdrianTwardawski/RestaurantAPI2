@@ -42,32 +42,32 @@ namespace RestaurantAPI2
         {
             var authenticationSettings = new AuthenticationSettings();
 
-            /*odnosz¹c siê do sekcji Authentication  z appsetting.json Bindujemy (³¹czymy wartoœci) do authenticationSettings,
-            czyli po tej linii kodu wartoœci, które mamy w pliku appsetting.json bêd¹ dostêpne na obiekcie authenticationSettings*/
-            Configuration.GetSection("Authentication").Bind(authenticationSettings);
+            /*odnoszï¿½c siï¿½ do sekcji Authentication  z appsetting.json Bindujemy (ï¿½ï¿½czymy wartoï¿½ci) do authenticationSettings,
+            czyli po tej linii kodu wartoï¿½ci, ktï¿½re mamy w pliku appsetting.json bï¿½dï¿½ dostï¿½pne na obiekcie authenticationSettings*/
+            Configuration.GetSection("Authentication").Bind(authenticationSettings)
 
             services.AddSingleton(authenticationSettings);
             services.AddAuthentication(option =>     //konfiguracja Autentykacji
             {
-                option.DefaultAuthenticateScheme = "Bearer"; //Domyœlny schemat autentykacji
+                option.DefaultAuthenticateScheme = "Bearer"; //Domyï¿½lny schemat autentykacji
                 option.DefaultScheme = "Bearer";
                 option.DefaultChallengeScheme = "Bearer";
             }).AddJwtBearer(cfg =>
             {
-                cfg.RequireHttpsMetadata = false; //nie wymuszamy od klienta tokena przez protokó³ https
-                cfg.SaveToken = true; //token powinien zostaæ zapisany po stronie servera do celów autentykacji
+                cfg.RequireHttpsMetadata = false; //nie wymuszamy od klienta tokena przez protokï¿½ https
+                cfg.SaveToken = true; //token powinien zostaï¿½ zapisany po stronie servera do celï¿½w autentykacji
                 cfg.TokenValidationParameters = new TokenValidationParameters 
-                //parametry walidacji, sprawdzenie czy token wys³any przez klienta jest zgodny z tym co wie server
+                //parametry walidacji, sprawdzenie czy token wysï¿½any przez klienta jest zgodny z tym co wie server
                 {
                     ValidIssuer = authenticationSettings.JwtIssuer, //Issuer - wydawca danego tokenu
-                    ValidAudience = authenticationSettings.JwtIssuer, //Audience - jakie podmioty mog¹ u¿ywaæ danego tokenu
+                    ValidAudience = authenticationSettings.JwtIssuer, //Audience - jakie podmioty mogï¿½ uï¿½ywaï¿½ danego tokenu
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(authenticationSettings.JwtKey)),
-                    //klucz prywatny wygenerowany na podstawie tej wartoœci JwtKey, która zosta³a zapisana w appsetting.json
+                    //klucz prywatny wygenerowany na podstawie tej wartoï¿½ci JwtKey, ktï¿½ra zostaï¿½a zapisana w appsetting.json
                 };
             });
             services.AddAuthorization(options =>
             {
-                options.AddPolicy("HasNationality", builder => builder.RequireClaim("Nationality", "German", "Polish")); //auoryzacja wartoœci¹ Claim'u
+                options.AddPolicy("HasNationality", builder => builder.RequireClaim("Nationality", "German", "Polish")); //auoryzacja wartoï¿½ciï¿½ Claim'u
                 options.AddPolicy("AtLeast20", builder => builder.AddRequirements(new MinimumAgeRequirement(20)));
                 options.AddPolicy("CreatedAtLeast2Restaurants", builder => builder.AddRequirements(new CreatedMultipleRestaurantsRequirement(2)));
                 
@@ -76,18 +76,18 @@ namespace RestaurantAPI2
             services.AddScoped<IAuthorizationHandler, ResourceOperationRequirementHandler>();
             services.AddScoped<IAuthorizationHandler, CreatedMultipleRestaurantsRequirementHandler>();
             services.AddControllers().AddFluentValidation();           
-            services.AddScoped<RestaurantSeeder>(); //rejestracja serwisu seeduj¹cego
+            services.AddScoped<RestaurantSeeder>(); //rejestracja serwisu seedujï¿½cego
             services.AddAutoMapper(this.GetType().Assembly); //rejestracja AutoMappera
-            services.AddScoped<IRestaurantService, RestaurantService>(); //rejestacja serwisu do obs³ugi metod kontrolera
+            services.AddScoped<IRestaurantService, RestaurantService>(); //rejestacja serwisu do obsï¿½ugi metod kontrolera
             services.AddScoped<IDishService, DishService>();
             services.AddScoped<IAccountService, AccountService>();
-            services.AddScoped<ErrorHandlingMiddleware>(); //rejestracja serwisu do obs³ugi wyj¹tków
+            services.AddScoped<ErrorHandlingMiddleware>(); //rejestracja serwisu do obsï¿½ugi wyjï¿½tkï¿½w
             services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
             services.AddScoped<IValidator<RegisterUserDto>, RegisterUserDtoValidator>();
             services.AddScoped<IValidator<RestaurantQuery>, RestaurantQueryValidator>();
             services.AddScoped<RequestTimeMiddleware>();
             services.AddScoped<IUserContextService, UserContextService>();
-            services.AddHttpContextAccessor(); //umo¿liwia wstrzykniêcie IHttpContextAccessor w UserContextService.cs
+            services.AddHttpContextAccessor(); //umoï¿½liwia wstrzykniï¿½cie IHttpContextAccessor w UserContextService.cs
             services.AddSwaggerGen();
             services.AddCors(options =>
             {
@@ -109,8 +109,8 @@ namespace RestaurantAPI2
             app.UseResponseCaching();
             app.UseStaticFiles();
             app.UseCors("FrontEndClient");
-            seeder.Seed(); /*ka¿de zapytanie do API przejdzie przez proces seedowanie, przez co encje
-            zostan¹ dodane ju¿ przy pierwszym zapytaniu w API*/
+            seeder.Seed(); /*kaï¿½de zapytanie do API przejdzie przez proces seedowanie, przez co encje
+            zostanï¿½ dodane juï¿½ przy pierwszym zapytaniu w API*/
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -118,7 +118,7 @@ namespace RestaurantAPI2
 
             app.UseMiddleware<ErrorHandlingMiddleware>();
             app.UseMiddleware<RequestTimeMiddleware>();
-            app.UseAuthentication(); //ka¿dy request wys³any przez klienta API bêdzie podlega³ procesowi Autentykacji
+            app.UseAuthentication(); //kaï¿½dy request wysï¿½any przez klienta API bï¿½dzie podlegaï¿½ procesowi Autentykacji
             app.UseHttpsRedirection();
 
             app.UseSwagger();
