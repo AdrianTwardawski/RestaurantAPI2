@@ -16,7 +16,7 @@ namespace RestaurantAPI2.Controllers
     [Route("api/restaurant")]
     [ApiController] /*używając ApiController pozbywamy się kodu, który był odpowiedzialny za 
     walidacje modelu i zwracanie odpowiedniego kodu statusu wraz z błędami walidacji do klienta*/
-    [Authorize] //każda z akcji w kontrolerze będzie wymagała Autoryzacji
+    //[Authorize] //każda z akcji w kontrolerze będzie wymagała Autoryzacji
     public class RestaurantController : ControllerBase
     {
         private readonly IRestaurantService _restaurantService;
@@ -27,9 +27,9 @@ namespace RestaurantAPI2.Controllers
         }
 
         [HttpGet]
-        [Authorize(Policy = "HasNationality")] //auoryzacja wartością Claim'u
-        [Authorize(Policy = "Atleast20")]
-        [Authorize(Policy = "CreatedAtLeast2Restaurants")]
+        //[Authorize(Policy = "HasNationality")] //auoryzacja wartością Claim'u
+        //[Authorize(Policy = "Atleast20")]
+        //[Authorize(Policy = "CreatedAtLeast2Restaurants")]
         //public ActionResult<IEnumerable<RestaurantDto>> GetAll([FromQuery]string searchPhase, [FromQuery]int pageNumber, [FromQuery]int pageSize)
         public ActionResult<IEnumerable<RestaurantDto>> GetAll([FromQuery]RestaurantQuery query)
         {

@@ -13,7 +13,6 @@ C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\obj\Debug\net5.0\Re
 C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\obj\Debug\net5.0\RestaurantAPI2.csproj.CoreCompileInputs.cache
 C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\obj\Debug\net5.0\RestaurantAPI2.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\obj\Debug\net5.0\staticwebassets\RestaurantAPI2.StaticWebAssets.Manifest.cache
-C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\obj\Debug\net5.0\staticwebassets\RestaurantAPI2.StaticWebAssets.xml
 C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\obj\Debug\net5.0\scopedcss\bundle\RestaurantAPI2.styles.css
 C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\obj\Debug\net5.0\RestaurantAPI2.RazorTargetAssemblyInfo.cache
 C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\obj\Debug\net5.0\RestaurantAPI2.dll

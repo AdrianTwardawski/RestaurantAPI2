@@ -1,0 +1,236 @@
+2022-03-24 15:26:34.9760|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'. 
+2022-03-24 15:27:07.4831||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-03-24 15:27:07.5171||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-03-24 15:27:07.5171||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-03-24 15:27:07.5171||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-03-24 15:27:07.5305||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-03-24 18:39:46.3644|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'. 
+2022-03-24 18:39:48.1804||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-03-24 18:39:48.1967||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-03-24 18:39:48.2023||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-03-24 18:39:48.2023||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-03-24 18:39:48.2181||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-03-24 18:56:13.2321|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'. 
+2022-03-24 18:56:14.6617||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-03-24 18:56:14.6759||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-03-24 18:56:14.6759||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-03-24 18:56:14.7010||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-03-24 18:56:14.7060||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-03-24 19:05:18.1905|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'. 
+2022-03-24 19:05:20.8794||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-03-24 19:05:21.0106||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-03-24 19:05:21.0611||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-03-24 19:05:21.1014||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-03-24 19:05:21.1211||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-03-24 19:07:26.7939||ERROR|RestaurantAPI2.Middleware.ErrorHandlingMiddleware|Object reference not set to an instance of an object. System.NullReferenceException: Object reference not set to an instance of an object.
+   at RestaurantAPI2.Authorization.MinimumAgeRequirementHandler.HandleRequirementAsync(AuthorizationHandlerContext context, MinimumAgeRequirement requirement) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\Authorization\MinimumAgeRequirementHandler.cs:line 20
+   at Microsoft.AspNetCore.Authorization.AuthorizationHandler`1.HandleAsync(AuthorizationHandlerContext context)
+   at Microsoft.AspNetCore.Authorization.DefaultAuthorizationService.AuthorizeAsync(ClaimsPrincipal user, Object resource, IEnumerable`1 requirements)
+   at Microsoft.AspNetCore.Authorization.Policy.PolicyEvaluator.AuthorizeAsync(AuthorizationPolicy policy, AuthenticateResult authenticationResult, HttpContext context, Object resource)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at RestaurantAPI2.MIddleware.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\RequestTimeMiddleware.cs:line 23
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at RestaurantAPI2.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\ErrorHandlingMiddleware.cs:line 22
+2022-03-24 19:08:40.1745||ERROR|RestaurantAPI2.Middleware.ErrorHandlingMiddleware|Object reference not set to an instance of an object. System.NullReferenceException: Object reference not set to an instance of an object.
+   at RestaurantAPI2.Authorization.MinimumAgeRequirementHandler.HandleRequirementAsync(AuthorizationHandlerContext context, MinimumAgeRequirement requirement) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\Authorization\MinimumAgeRequirementHandler.cs:line 20
+   at Microsoft.AspNetCore.Authorization.AuthorizationHandler`1.HandleAsync(AuthorizationHandlerContext context)
+   at Microsoft.AspNetCore.Authorization.DefaultAuthorizationService.AuthorizeAsync(ClaimsPrincipal user, Object resource, IEnumerable`1 requirements)
+   at Microsoft.AspNetCore.Authorization.Policy.PolicyEvaluator.AuthorizeAsync(AuthorizationPolicy policy, AuthenticateResult authenticationResult, HttpContext context, Object resource)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at RestaurantAPI2.MIddleware.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\RequestTimeMiddleware.cs:line 23
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at RestaurantAPI2.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\ErrorHandlingMiddleware.cs:line 22
+2022-03-24 19:08:48.9178||ERROR|RestaurantAPI2.Middleware.ErrorHandlingMiddleware|Object reference not set to an instance of an object. System.NullReferenceException: Object reference not set to an instance of an object.
+   at RestaurantAPI2.Authorization.MinimumAgeRequirementHandler.HandleRequirementAsync(AuthorizationHandlerContext context, MinimumAgeRequirement requirement) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\Authorization\MinimumAgeRequirementHandler.cs:line 20
+   at Microsoft.AspNetCore.Authorization.AuthorizationHandler`1.HandleAsync(AuthorizationHandlerContext context)
+   at Microsoft.AspNetCore.Authorization.DefaultAuthorizationService.AuthorizeAsync(ClaimsPrincipal user, Object resource, IEnumerable`1 requirements)
+   at Microsoft.AspNetCore.Authorization.Policy.PolicyEvaluator.AuthorizeAsync(AuthorizationPolicy policy, AuthenticateResult authenticationResult, HttpContext context, Object resource)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at RestaurantAPI2.MIddleware.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\RequestTimeMiddleware.cs:line 23
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at RestaurantAPI2.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\ErrorHandlingMiddleware.cs:line 22
+2022-03-24 19:09:48.3101||ERROR|RestaurantAPI2.Middleware.ErrorHandlingMiddleware|Object reference not set to an instance of an object. System.NullReferenceException: Object reference not set to an instance of an object.
+   at RestaurantAPI2.Authorization.MinimumAgeRequirementHandler.HandleRequirementAsync(AuthorizationHandlerContext context, MinimumAgeRequirement requirement) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\Authorization\MinimumAgeRequirementHandler.cs:line 20
+   at Microsoft.AspNetCore.Authorization.AuthorizationHandler`1.HandleAsync(AuthorizationHandlerContext context)
+   at Microsoft.AspNetCore.Authorization.DefaultAuthorizationService.AuthorizeAsync(ClaimsPrincipal user, Object resource, IEnumerable`1 requirements)
+   at Microsoft.AspNetCore.Authorization.Policy.PolicyEvaluator.AuthorizeAsync(AuthorizationPolicy policy, AuthenticateResult authenticationResult, HttpContext context, Object resource)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at RestaurantAPI2.MIddleware.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\RequestTimeMiddleware.cs:line 23
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at RestaurantAPI2.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\ErrorHandlingMiddleware.cs:line 22
+2022-03-24 19:10:41.6865||ERROR|RestaurantAPI2.Middleware.ErrorHandlingMiddleware|Object reference not set to an instance of an object. System.NullReferenceException: Object reference not set to an instance of an object.
+   at RestaurantAPI2.Authorization.MinimumAgeRequirementHandler.HandleRequirementAsync(AuthorizationHandlerContext context, MinimumAgeRequirement requirement) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\Authorization\MinimumAgeRequirementHandler.cs:line 20
+   at Microsoft.AspNetCore.Authorization.AuthorizationHandler`1.HandleAsync(AuthorizationHandlerContext context)
+   at Microsoft.AspNetCore.Authorization.DefaultAuthorizationService.AuthorizeAsync(ClaimsPrincipal user, Object resource, IEnumerable`1 requirements)
+   at Microsoft.AspNetCore.Authorization.Policy.PolicyEvaluator.AuthorizeAsync(AuthorizationPolicy policy, AuthenticateResult authenticationResult, HttpContext context, Object resource)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at RestaurantAPI2.MIddleware.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\RequestTimeMiddleware.cs:line 23
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at RestaurantAPI2.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\ErrorHandlingMiddleware.cs:line 22
+2022-03-24 19:10:49.8329||ERROR|RestaurantAPI2.Middleware.ErrorHandlingMiddleware|Object reference not set to an instance of an object. System.NullReferenceException: Object reference not set to an instance of an object.
+   at RestaurantAPI2.Authorization.MinimumAgeRequirementHandler.HandleRequirementAsync(AuthorizationHandlerContext context, MinimumAgeRequirement requirement) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\Authorization\MinimumAgeRequirementHandler.cs:line 20
+   at Microsoft.AspNetCore.Authorization.AuthorizationHandler`1.HandleAsync(AuthorizationHandlerContext context)
+   at Microsoft.AspNetCore.Authorization.DefaultAuthorizationService.AuthorizeAsync(ClaimsPrincipal user, Object resource, IEnumerable`1 requirements)
+   at Microsoft.AspNetCore.Authorization.Policy.PolicyEvaluator.AuthorizeAsync(AuthorizationPolicy policy, AuthenticateResult authenticationResult, HttpContext context, Object resource)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at RestaurantAPI2.MIddleware.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\RequestTimeMiddleware.cs:line 23
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at RestaurantAPI2.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\ErrorHandlingMiddleware.cs:line 22
+2022-03-24 19:11:19.3908|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'. 
+2022-03-24 19:11:21.0208||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-03-24 19:11:21.0406||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-03-24 19:11:21.0720||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-03-24 19:11:21.0795||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-03-24 19:11:21.0795||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-03-24 19:11:59.9706|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'. 
+2022-03-24 19:12:01.4737||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-03-24 19:12:01.4737||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-03-24 19:12:01.4896||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-03-24 19:12:01.4896||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-03-24 19:12:01.5005||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-03-24 19:12:33.3793|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'. 
+2022-03-24 19:12:34.8991||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-03-24 19:12:34.9082||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-03-24 19:12:34.9082||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-03-24 19:12:34.9082||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-03-24 19:12:34.9246||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-03-24 19:13:09.5236|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-03-24 19:13:09.5593|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-03-24 19:13:12.3407||INFO|RestaurantAPI2.MIddleware.RequestTimeMiddleware|Request[GET] at /api/restaurant took 10173 ms 
+2022-03-24 19:13:59.4232|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'. 
+2022-03-24 19:14:01.3307||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-03-24 19:14:01.3307||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-03-24 19:14:01.3307||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-03-24 19:14:01.3588||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-03-24 19:14:01.3813||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-03-24 19:14:14.2729||ERROR|RestaurantAPI2.Middleware.ErrorHandlingMiddleware|Object reference not set to an instance of an object. System.NullReferenceException: Object reference not set to an instance of an object.
+   at RestaurantAPI2.Authorization.MinimumAgeRequirementHandler.HandleRequirementAsync(AuthorizationHandlerContext context, MinimumAgeRequirement requirement) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\Authorization\MinimumAgeRequirementHandler.cs:line 20
+   at Microsoft.AspNetCore.Authorization.AuthorizationHandler`1.HandleAsync(AuthorizationHandlerContext context)
+   at Microsoft.AspNetCore.Authorization.DefaultAuthorizationService.AuthorizeAsync(ClaimsPrincipal user, Object resource, IEnumerable`1 requirements)
+   at Microsoft.AspNetCore.Authorization.Policy.PolicyEvaluator.AuthorizeAsync(AuthorizationPolicy policy, AuthenticateResult authenticationResult, HttpContext context, Object resource)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at RestaurantAPI2.MIddleware.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\RequestTimeMiddleware.cs:line 23
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at RestaurantAPI2.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\ErrorHandlingMiddleware.cs:line 22
+2022-03-24 19:15:19.2690|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'. 
+2022-03-24 19:15:20.8905||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-03-24 19:15:20.8905||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-03-24 19:15:20.9078||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-03-24 19:15:20.9078||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-03-24 19:15:20.9078||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-03-24 19:16:15.0207||ERROR|RestaurantAPI2.Middleware.ErrorHandlingMiddleware|Object reference not set to an instance of an object. System.NullReferenceException: Object reference not set to an instance of an object.
+   at RestaurantAPI2.Authorization.MinimumAgeRequirementHandler.HandleRequirementAsync(AuthorizationHandlerContext context, MinimumAgeRequirement requirement) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\Authorization\MinimumAgeRequirementHandler.cs:line 20
+   at Microsoft.AspNetCore.Authorization.AuthorizationHandler`1.HandleAsync(AuthorizationHandlerContext context)
+   at Microsoft.AspNetCore.Authorization.DefaultAuthorizationService.AuthorizeAsync(ClaimsPrincipal user, Object resource, IEnumerable`1 requirements)
+   at Microsoft.AspNetCore.Authorization.Policy.PolicyEvaluator.AuthorizeAsync(AuthorizationPolicy policy, AuthenticateResult authenticationResult, HttpContext context, Object resource)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at RestaurantAPI2.MIddleware.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\RequestTimeMiddleware.cs:line 23
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at RestaurantAPI2.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2\MIddleware\ErrorHandlingMiddleware.cs:line 22
+2022-03-24 19:18:18.5993|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'. 
+2022-03-24 19:18:20.4003||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-03-24 19:18:20.4058||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-03-24 19:18:20.4058||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-03-24 19:18:20.4058||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-03-24 19:18:20.4256||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-03-24 19:19:51.7516|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'. 
+2022-03-24 19:19:53.2583||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-03-24 19:19:53.2583||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-03-24 19:19:53.2723||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-03-24 19:19:53.2839||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-03-24 19:19:53.2839||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-03-24 19:20:43.2530|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'. 
+2022-03-24 19:20:44.8678||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-03-24 19:20:44.8678||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-03-24 19:20:44.8773||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-03-24 19:20:44.8773||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-03-24 19:20:44.8773||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-03-24 19:23:55.9028|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'. 
+2022-03-24 19:23:57.4603||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-03-24 19:23:57.4603||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-03-24 19:23:57.4811||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-03-24 19:23:57.4928||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-03-24 19:23:57.4995||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-03-24 19:24:30.0925|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'. 
+2022-03-24 19:24:31.7522||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-03-24 19:24:31.7522||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-03-24 19:24:31.7643||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-03-24 19:24:31.7643||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-03-24 19:24:31.7643||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-03-24 19:24:35.9646|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-03-24 19:24:36.0032|10102|WARN|Microsoft.EntityFrameworkCore.Query|The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. 
+2022-03-24 19:25:02.1083|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'. 
+2022-03-24 19:25:03.9586||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-03-24 19:25:03.9946||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-03-24 19:25:04.0097||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-03-24 19:25:04.0339||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-03-24 19:25:04.0794||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-03-24 19:25:43.0218|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'. 
+2022-03-24 19:25:44.8923||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-03-24 19:25:44.8923||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-03-24 19:25:44.9178||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-03-24 19:25:44.9325||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-03-24 19:25:44.9400||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-03-24 19:26:18.9114|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'. 
+2022-03-24 19:26:20.5198||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-03-24 19:26:20.5198||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-03-24 19:26:20.5349||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-03-24 19:26:20.5349||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-03-24 19:26:20.5462||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-03-24 19:26:54.2534|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'. 
+2022-03-24 19:32:58.6833|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'. 
+2022-03-24 19:33:01.0450||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-03-24 19:33:01.0799||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-03-24 19:33:01.1064||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-03-24 19:33:01.1164||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-03-24 19:33:01.1333||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-03-24 19:39:17.2906|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'. 
+2022-03-24 19:39:18.8752||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-03-24 19:39:18.8752||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-03-24 19:39:18.9049||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-03-24 19:39:18.9242||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-03-24 19:39:18.9242||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-03-24 19:45:38.9263|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'. 
+2022-03-24 19:45:40.5395||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-03-24 19:45:40.5395||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-03-24 19:45:40.5506||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-03-24 19:45:40.5506||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-03-24 19:45:40.5626||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
+2022-03-24 19:54:05.3689|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'. 
+2022-03-24 19:54:12.9703||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-03-24 19:54:12.9703||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-03-24 19:54:12.9874||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-03-24 19:54:12.9874||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-03-24 19:54:12.9874||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\RestaurantAPI2\RestaurantAPI2 
