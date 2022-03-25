@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("RestaurantAPI2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Adrian\\Desktop\\dev\\c#\\RestaurantAPI2\\RestaurantAPI2", "RestaurantAPI2.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("RestaurantAPI2.IntegrationTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
