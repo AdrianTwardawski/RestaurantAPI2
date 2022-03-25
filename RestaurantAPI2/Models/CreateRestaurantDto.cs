@@ -19,9 +19,9 @@ namespace RestaurantAPI2.Models
         [Required]
         [MaxLength(50)]
         public string City { get; set; }
-        public string Street { get; set; }
         [Required]
         [MaxLength(50)]
+        public string Street { get; set; }      
         public string PostalCode { get; set; }
     }
 }

@@ -9,6 +9,10 @@ using System.Net.Http;
 using RestaurantAPI2.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using RestaurantAPI2.Models;
+using Newtonsoft.Json;
+using System.Text;
+using Microsoft.AspNetCore.Authorization.Policy;
 
 namespace RestaurantAPI2.IntegrationTests
 {
@@ -36,12 +40,47 @@ namespace RestaurantAPI2.IntegrationTests
 
                         services.Remove(dbContextOptions);
 
+                        services.AddSingleton<IPolicyEvaluator, FakePolicyEvaluator>();
+
+                        services.AddMvc(option => option.Filters.Add(new FakeUserFilter()));
+
                         services
                             .AddDbContext<RestaurantDbContext>(options => options.UseInMemoryDatabase("RestaurantDb"));
                     });
                 })
                 .CreateClient();  // za pomocą tego klienta możemy odwołać się do różnych metod z naszego API
         }
+
+
+        [Fact]
+        public async Task CreateRestaurant_WithValidModel_ReturnsCreatedStatus()
+        {
+            // arrange
+            var model = new CreateRestaurantDto()
+            {
+                Name = "TestRestaurant",
+                City = "Kraków",
+                Street = "Długa 5"
+            };
+
+            var json = JsonConvert.SerializeObject(model);
+
+            var httpContent = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
+
+            // act
+            var response = await _client.PostAsync("/api/restaurant", httpContent);
+
+            // assert
+            response.StatusCode.Should().Be(System.Net.HttpStatusCode.Created);
+            response.Headers.Location.Should().NotBeNull();
+        }
+
+
+
+
+
+
+
 
 
         [Theory]

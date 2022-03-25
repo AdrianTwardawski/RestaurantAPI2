@@ -1,1 +1,2 @@
 2022-03-24 19:13:12.3407||INFO|RestaurantAPI2.MIddleware.RequestTimeMiddleware|Request[GET] at /api/restaurant took 10173 ms 
+2022-03-25 22:20:46.4886||INFO|RestaurantAPI2.MIddleware.RequestTimeMiddleware|Request[POST] at /api/restaurant took 79263 ms 

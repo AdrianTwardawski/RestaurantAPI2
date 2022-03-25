@@ -16,7 +16,7 @@ namespace RestaurantAPI2.Controllers
     [Route("api/restaurant")]
     [ApiController] /*używając ApiController pozbywamy się kodu, który był odpowiedzialny za 
     walidacje modelu i zwracanie odpowiedniego kodu statusu wraz z błędami walidacji do klienta*/
-    //[Authorize] //każda z akcji w kontrolerze będzie wymagała Autoryzacji
+    [Authorize] //każda z akcji w kontrolerze będzie wymagała Autoryzacji
     public class RestaurantController : ControllerBase
     {
         private readonly IRestaurantService _restaurantService;
@@ -27,6 +27,7 @@ namespace RestaurantAPI2.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous] //dzięki temu atrybutowi autoryzacja nie jest wymagana
         //[Authorize(Policy = "HasNationality")] //auoryzacja wartością Claim'u
         //[Authorize(Policy = "Atleast20")]
         //[Authorize(Policy = "CreatedAtLeast2Restaurants")]
@@ -45,7 +46,7 @@ namespace RestaurantAPI2.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Admin, Manager")] //atrybut Authorize nałożony na akcje ma większy priorytet niż Authorize na poziomie kontrolera
+        //[Authorize(Roles = "Admin, Manager")] //atrybut Authorize nałożony na akcje ma większy priorytet niż Authorize na poziomie kontrolera
         public ActionResult CreateRestaurant([FromBody] CreateRestaurantDto dto)
         {
             /*POZBYTO SIĘ ZA POMOCĄ [ApiController]*/
