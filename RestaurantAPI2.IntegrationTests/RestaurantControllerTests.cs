@@ -6,6 +6,9 @@ using Xunit;
 using Microsoft.AspNetCore.Mvc.Testing;
 using FluentAssertions;
 using System.Net.Http;
+using RestaurantAPI2.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace RestaurantAPI2.IntegrationTests
 {
@@ -18,7 +21,26 @@ namespace RestaurantAPI2.IntegrationTests
         {
            //var factory = new WebApplicationFactory<Startup>();  //Tworzymy fabrykę do której przekazujemy typ statupu. Klasa ta przyjmuje jako parametr generyczny entry point, czyli klasę startową projektu,
                                                                  //Dzięki temu klasa WebApplicationFactory będzie wiedziała w jaki sposób uruchomić projekt i odpowiednio go skonfiguruje
-            _client = factory.CreateClient();  // za pomocą tego klienta możemy odwołać się do różnych metod z naszego API
+            _client = factory
+                //WebHostBuilder umożliwi nam modyfikację budowanego webhosta. Jesteśmy w stanie nadpisać
+                //konfigurację z rejestracji serwisów, po to aby usunąć istniejącą już rejestracje dbContextu,
+                //a następnie zarejestrować nasz własny dbContext, który w tym przypadku będzie instancją InMemory.
+                //Teraz API, które będzie działało podczas wywołania testów integracyjnych nie będzie już korzystać z bazy danych
+                //msSql, tylko z baz danych InMemory
+                .WithWebHostBuilder(builder =>  
+                {           
+                    builder.ConfigureServices(services =>
+                    {
+                        var dbContextOptions = services
+                            .SingleOrDefault(services => services.ServiceType == typeof(DbContextOptions<RestaurantDbContext>));
+
+                        services.Remove(dbContextOptions);
+
+                        services
+                            .AddDbContext<RestaurantDbContext>(options => options.UseInMemoryDatabase("RestaurantDb"));
+                    });
+                })
+                .CreateClient();  // za pomocą tego klienta możemy odwołać się do różnych metod z naszego API
         }
 
 

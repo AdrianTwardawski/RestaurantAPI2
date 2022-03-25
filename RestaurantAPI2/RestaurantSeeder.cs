@@ -17,12 +17,14 @@ namespace RestaurantAPI2
         {
             if(_dbContext.Database.CanConnect()) //sprawdzenie połączenia z Db
             {
-                var pendingMigrations = _dbContext.Database.GetPendingMigrations();
-                if(pendingMigrations != null && pendingMigrations.Any())
+                if (_dbContext.Database.IsRelational()) //na potrzeby testów
                 {
-                    _dbContext.Database.Migrate();
-                }
-                   
+                    var pendingMigrations = _dbContext.Database.GetPendingMigrations();
+                    if (pendingMigrations != null && pendingMigrations.Any())
+                    {
+                        _dbContext.Database.Migrate();
+                    }
+                }                                
 
                 if(!_dbContext.Restaurants.Any()) //sprawdzenie czy Db jest pusta
                 {

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YC8ReP2F75g16Fjcsz/Bv7WinUAClmDrjgf1py6LX7Ry+phonN39ZHsyjtGVIqsSC5XfXFSHg1+MZbL2O7LYWw==",
+  "dgSpecHash": "uqu2FxGb9VwYtoDPa97vgrlzPyVQ2cfQLVwGzU/PbFn4s4R5yvnTdGA+8QE0/7m3iyy2EhR6S7Uai2wP3YO+Ug==",
   "success": true,
   "projectFilePath": "C:\\Users\\Adrian\\Desktop\\dev\\c#\\RestaurantAPI2\\RestaurantAPI2.IntegrationTests\\RestaurantAPI2.IntegrationTests.csproj",
   "expectedPackageFiles": [
@@ -25,9 +25,10 @@
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",
-    "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.13\\microsoft.entityframeworkcore.5.0.13.nupkg.sha512",
-    "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.13\\microsoft.entityframeworkcore.abstractions.5.0.13.nupkg.sha512",
-    "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.13\\microsoft.entityframeworkcore.analyzers.5.0.13.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.15\\microsoft.entityframeworkcore.5.0.15.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.15\\microsoft.entityframeworkcore.abstractions.5.0.15.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.15\\microsoft.entityframeworkcore.analyzers.5.0.15.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\5.0.15\\microsoft.entityframeworkcore.inmemory.5.0.15.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.13\\microsoft.entityframeworkcore.relational.5.0.13.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.13\\microsoft.entityframeworkcore.sqlserver.5.0.13.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
