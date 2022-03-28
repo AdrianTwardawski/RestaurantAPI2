@@ -13,6 +13,7 @@ using RestaurantAPI2.Models;
 using Newtonsoft.Json;
 using System.Text;
 using Microsoft.AspNetCore.Authorization.Policy;
+using RestaurantAPI2.IntegrationTests.Helpers;
 
 namespace RestaurantAPI2.IntegrationTests
 {
@@ -63,9 +64,7 @@ namespace RestaurantAPI2.IntegrationTests
                 Street = "Długa 5"
             };
 
-            var json = JsonConvert.SerializeObject(model);
-
-            var httpContent = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
+            var httpContent = model.ToJsonHttpContent();
 
             // act
             var response = await _client.PostAsync("/api/restaurant", httpContent);
@@ -76,11 +75,25 @@ namespace RestaurantAPI2.IntegrationTests
         }
 
 
+        [Fact]
+        public async Task CreateRestaurant_WithInvalidModel_ReturnsBadRequest()
+        {
+            // arrange
+            var model = new CreateRestaurantDto()
+            {
+                ContactEmail = "test@test.com",
+                Description = "test desc",
+                ContactNumber = "999 888 777"
+            };
 
+            var httpContent = model.ToJsonHttpContent();
 
+            // act
+            var response = await _client.PostAsync("/api/restaurant", httpContent);
 
-
-
+            // assert
+            response.StatusCode.Should().Be(System.Net.HttpStatusCode.BadRequest);
+        }
 
 
         [Theory]
