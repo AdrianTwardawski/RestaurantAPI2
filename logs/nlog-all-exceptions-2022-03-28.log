@@ -1,0 +1,4 @@
+2022-03-28 18:49:28.1623||ERROR|RestaurantAPI2.Services.RestaurantService|Restaurant with id: 987 DELETE action invoked 
+2022-03-28 20:35:00.2123||ERROR|RestaurantAPI2.Services.RestaurantService|Restaurant with id: 3 DELETE action invoked 
+2022-03-28 20:39:16.4738||ERROR|RestaurantAPI2.Services.RestaurantService|Restaurant with id: 3 DELETE action invoked 
+2022-03-28 20:39:25.4960||ERROR|RestaurantAPI2.Services.RestaurantService|Restaurant with id: 3 DELETE action invoked 

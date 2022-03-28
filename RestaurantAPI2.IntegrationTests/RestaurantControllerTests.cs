@@ -21,19 +21,20 @@ namespace RestaurantAPI2.IntegrationTests
     {
 
         private HttpClient _client;
+        private WebApplicationFactory<Startup> _factory;
 
         public RestaurantControllerTests(WebApplicationFactory<Startup> factory)
         {
-           //var factory = new WebApplicationFactory<Startup>();  //Tworzymy fabrykę do której przekazujemy typ statupu. Klasa ta przyjmuje jako parametr generyczny entry point, czyli klasę startową projektu,
-                                                                 //Dzięki temu klasa WebApplicationFactory będzie wiedziała w jaki sposób uruchomić projekt i odpowiednio go skonfiguruje
-            _client = factory
+            //var factory = new WebApplicationFactory<Startup>();  //Tworzymy fabrykę do której przekazujemy typ statupu. Klasa ta przyjmuje jako parametr generyczny entry point, czyli klasę startową projektu,
+            //Dzięki temu klasa WebApplicationFactory będzie wiedziała w jaki sposób uruchomić projekt i odpowiednio go skonfiguruje
+            _factory = factory
                 //WebHostBuilder umożliwi nam modyfikację budowanego webhosta. Jesteśmy w stanie nadpisać
                 //konfigurację z rejestracji serwisów, po to aby usunąć istniejącą już rejestracje dbContextu,
                 //a następnie zarejestrować nasz własny dbContext, który w tym przypadku będzie instancją InMemory.
                 //Teraz API, które będzie działało podczas wywołania testów integracyjnych nie będzie już korzystać z bazy danych
                 //msSql, tylko z baz danych InMemory
-                .WithWebHostBuilder(builder =>  
-                {           
+                .WithWebHostBuilder(builder =>
+                {
                     builder.ConfigureServices(services =>
                     {
                         var dbContextOptions = services
@@ -48,8 +49,73 @@ namespace RestaurantAPI2.IntegrationTests
                         services
                             .AddDbContext<RestaurantDbContext>(options => options.UseInMemoryDatabase("RestaurantDb"));
                     });
-                })
-                .CreateClient();  // za pomocą tego klienta możemy odwołać się do różnych metod z naszego API
+                });
+                _client = _factory.CreateClient();  // za pomocą tego klienta możemy odwołać się do różnych metod z naszego API
+        }
+
+
+        private void SeedRestaurant(Restaurant restaurant)
+        {
+            var scopeFactory = _factory.Services.GetService<IServiceScopeFactory>();
+            using var scope = scopeFactory.CreateScope();
+            var _dbContext = scope.ServiceProvider.GetService<RestaurantDbContext>();
+
+            _dbContext.Restaurants.Add(restaurant);
+            _dbContext.SaveChanges();
+        }
+
+
+        [Fact]
+        public async Task Delete_ForRestaurantOwner_ReturnsNoContent()
+        {
+            // arrange
+            var restaurant = new Restaurant()
+            {
+                CreatedById = 1,
+                Name = "Test"
+            };
+
+            SeedRestaurant(restaurant);
+
+            //act
+            var response = await _client.DeleteAsync("/api/restaurant/" + restaurant.Id);
+
+            // assert
+            response.StatusCode.Should().Be(System.Net.HttpStatusCode.NoContent);
+        }
+
+
+
+        [Fact]
+        public async Task Delete_ForNonRestaurantOwner_ReturnsForbidden()
+        {
+            // arrange
+            var restaurant = new Restaurant()
+            {
+                CreatedById = 900,
+                Name = "Test"
+            };
+
+            SeedRestaurant(restaurant);
+
+            //act
+            var response = await _client.DeleteAsync("/api/restaurant/" + restaurant.Id);
+
+            // assert
+            response.StatusCode.Should().Be(System.Net.HttpStatusCode.Forbidden);
+        }
+
+
+        [Fact]
+        public async Task Delete_ForNonExistingRestaurant_ReturnsNotFound()
+        {
+            // act
+
+            var response = await _client.DeleteAsync("/api/restaurant/987");
+
+            // assert
+
+            response.StatusCode.Should().Be(System.Net.HttpStatusCode.NotFound);
         }
 
 

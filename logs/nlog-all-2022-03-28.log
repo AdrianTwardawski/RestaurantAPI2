@@ -1,3 +1,15 @@
 2022-03-28 17:54:04.5564|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
 2022-03-28 17:55:04.3807|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
 2022-03-28 18:03:14.0804|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2022-03-28 18:49:27.7568|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2022-03-28 18:49:28.1623||ERROR|RestaurantAPI2.Services.RestaurantService|Restaurant with id: 987 DELETE action invoked 
+2022-03-28 20:34:35.1441|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2022-03-28 20:34:36.3656|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2022-03-28 20:34:36.5613|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2022-03-28 20:34:36.6750|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2022-03-28 20:34:59.7856|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2022-03-28 20:35:00.2123||ERROR|RestaurantAPI2.Services.RestaurantService|Restaurant with id: 3 DELETE action invoked 
+2022-03-28 20:39:16.1395|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2022-03-28 20:39:16.4738||ERROR|RestaurantAPI2.Services.RestaurantService|Restaurant with id: 3 DELETE action invoked 
+2022-03-28 20:39:25.1340|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2022-03-28 20:39:25.4960||ERROR|RestaurantAPI2.Services.RestaurantService|Restaurant with id: 3 DELETE action invoked 
