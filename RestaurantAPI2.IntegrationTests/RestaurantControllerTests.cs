@@ -40,14 +40,14 @@ namespace RestaurantAPI2.IntegrationTests
                         var dbContextOptions = services
                             .SingleOrDefault(services => services.ServiceType == typeof(DbContextOptions<RestaurantDbContext>));
 
-                        services.Remove(dbContextOptions);
+                        services.Remove(dbContextOptions);  //czyścimy domyślny kontekst baz danych
 
                         services.AddSingleton<IPolicyEvaluator, FakePolicyEvaluator>();
 
                         services.AddMvc(option => option.Filters.Add(new FakeUserFilter()));
 
                         services
-                            .AddDbContext<RestaurantDbContext>(options => options.UseInMemoryDatabase("RestaurantDb"));
+                            .AddDbContext<RestaurantDbContext>(options => options.UseInMemoryDatabase("RestaurantDb")); //nadpisujemy kontekst baz danych
                     });
                 });
                 _client = _factory.CreateClient();  // za pomocą tego klienta możemy odwołać się do różnych metod z naszego API

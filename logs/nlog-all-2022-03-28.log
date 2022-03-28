@@ -13,3 +13,6 @@
 2022-03-28 20:39:16.4738||ERROR|RestaurantAPI2.Services.RestaurantService|Restaurant with id: 3 DELETE action invoked 
 2022-03-28 20:39:25.1340|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
 2022-03-28 20:39:25.4960||ERROR|RestaurantAPI2.Services.RestaurantService|Restaurant with id: 3 DELETE action invoked 
+2022-03-28 22:25:33.7342|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'. 
+2022-03-28 22:25:50.6431|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2022-03-28 22:26:05.1888|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
