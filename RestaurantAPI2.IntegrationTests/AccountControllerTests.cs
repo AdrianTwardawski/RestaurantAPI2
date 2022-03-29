@@ -11,17 +11,20 @@ using Microsoft.Extensions.DependencyInjection;
 using RestaurantAPI2.Models;
 using RestaurantAPI2.IntegrationTests.Helpers;
 using FluentAssertions;
+using Moq;
+using RestaurantAPI2.Services;
 
 namespace RestaurantAPI2.IntegrationTests
 {
     public class AccountControllerTests : IClassFixture<WebApplicationFactory<Startup>>
     {
         private HttpClient _client;
-        private WebApplicationFactory<Startup> _factory;
+        private Mock<IAccountService> _accountServiceMock = new Mock<IAccountService>();
+
 
         public AccountControllerTests(WebApplicationFactory<Startup> factory)
         {
-            _factory = factory
+            _client = factory
                .WithWebHostBuilder(builder =>
                {
                    builder.ConfigureServices(services =>
@@ -29,14 +32,43 @@ namespace RestaurantAPI2.IntegrationTests
                        var dbContextOptions = services
                            .SingleOrDefault(services => services.ServiceType == typeof(DbContextOptions<RestaurantDbContext>));
 
-                       services.Remove(dbContextOptions); 
+                       services.Remove(dbContextOptions);
+
+                       services.AddSingleton<IAccountService>(_accountServiceMock.Object);
 
                        services.AddDbContext<RestaurantDbContext>(options => options.UseInMemoryDatabase("RestaurantDb"));
                     });
-               });
-
-            _client = factory.CreateClient();
+               })
+               .CreateClient();
         }
+
+
+        [Fact]
+        public async Task Login_ForRegisteredUser_ReturnsOk()
+        {
+            // arrange
+
+            _accountServiceMock.
+                Setup(e => e.GenerateJwt(It.IsAny<LoginDto>()))
+                .Returns("jwt");
+
+            var loginDto = new LoginDto()
+            {
+                Email = "test@test.com",
+                Password = "password123"
+            };
+
+            var httpContent = loginDto.ToJsonHttpContent();
+
+            // act
+
+            var response = await _client.PostAsync("/api/account/login", httpContent);
+
+            // assert
+
+            response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
+        }
+
 
         [Fact]
         public async Task RegisterUser_ForValidModel_ReturnsOk()
