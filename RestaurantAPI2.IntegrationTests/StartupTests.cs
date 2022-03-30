@@ -38,7 +38,7 @@ namespace RestaurantAPI2.IntegrationTests
         {
             var scopeFactory = _factory.Services.GetService<IServiceScopeFactory>();
             using var scope = scopeFactory.CreateScope();
-
+                
 
             // assert
             _controllerTypes.ForEach(t =>
