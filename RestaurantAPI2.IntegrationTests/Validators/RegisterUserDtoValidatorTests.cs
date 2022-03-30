@@ -14,6 +14,59 @@ namespace RestaurantAPI2.IntegrationTests.Validators
     public class RegisterUserDtoValidatorTests
     {
         private RestaurantDbContext _dbContext;
+        public static IEnumerable<object[]> GetSampleValidData()
+        {
+            var list = new List<RegisterUserDto>()
+            {
+                new RegisterUserDto()
+                {
+                    Email = "test@test.com",
+                    Password = "pass123",
+                    ConfirmPassword = "pass123"
+                },
+                new RegisterUserDto()
+                {
+                    Email = "test4@test.com",
+                    Password = "pass883",
+                    ConfirmPassword = "pass883"
+                },
+                new RegisterUserDto()
+                {
+                    Email = "test5@test.com",
+                    Password = "pass093",
+                    ConfirmPassword = "pass093"
+                }
+            };
+
+            return list.Select(q => new object[] { q });
+        }
+
+        public static IEnumerable<object[]> GetSampleInvalidData()
+        {
+            var list = new List<RegisterUserDto>()
+            {
+                new RegisterUserDto()
+                {
+                    Email = "test2@test.com",
+                    Password = "pass123",
+                    ConfirmPassword = "pass123"
+                },
+                new RegisterUserDto()
+                {
+                    Email = "test3@test.com",
+                    Password = "pass883",
+                    ConfirmPassword = "pass883"
+                },
+                new RegisterUserDto()
+                {
+                    Email = "test1@test.com",
+                    Password = "pass123",
+                    ConfirmPassword = "pass321"
+                }
+            };
+
+            return list.Select(q => new object[] { q });
+        }
 
         public RegisterUserDtoValidatorTests()
         {
@@ -42,17 +95,11 @@ namespace RestaurantAPI2.IntegrationTests.Validators
             _dbContext.SaveChanges();
         }
 
-        [Fact]
-        public void Validate_ForValidModel_ReturnsSuccess()
+        [Theory]
+        [MemberData(nameof(GetSampleValidData))]
+        public void Validate_ForValidModel_ReturnsSuccess(RegisterUserDto model)
         {
-             // arrange
-             var model = new RegisterUserDto()
-             {
-                 Email = "test@test.com",
-                 Password = "pass123",
-                 ConfirmPassword = "pass123"
-              };
-        
+             // arrange                 
             var validator = new RegisterUserDtoValidator(_dbContext);
 
             // act
@@ -63,17 +110,11 @@ namespace RestaurantAPI2.IntegrationTests.Validators
 
         }
 
-        [Fact]
-        public void Validate_ForInValidModel_ReturnsFailure()
+        [Theory]
+        [MemberData(nameof(GetSampleInvalidData))]
+        public void Validate_ForInValidModel_ReturnsFailure(RegisterUserDto model)
         {
             // arrange
-            var model = new RegisterUserDto()
-            {
-                Email = "test2@test.com",
-                Password = "pass123",
-                ConfirmPassword = "pass123"
-            };
-
             var validator = new RegisterUserDtoValidator(_dbContext);
 
             // act
